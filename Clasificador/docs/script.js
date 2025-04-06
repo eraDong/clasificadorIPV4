@@ -16,7 +16,7 @@ async function analyzeIP() {
     resultCard.classList.remove('visible');
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/analizar', {
+        const response = await fetch('https://clasificadoripv4.onrender.com/analizar', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ip })
