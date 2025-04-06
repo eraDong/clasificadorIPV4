@@ -4,6 +4,7 @@ from logica import *  # Importar funciones
 
 app = Flask(__name__)
 CORS(app)
+CORS(app, resources={r"/analizar": {"origins": "https://m4nu0113.github.io"}})
 
 @app.route('/analizar', methods=['POST'])
 def analizar():
@@ -27,4 +28,4 @@ def analizar():
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=1000)
