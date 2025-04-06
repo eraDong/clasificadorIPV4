@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador IPv4</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <h1>🔍 Analizador de IPv4</h1>
+        
+        <div class="input-group">
+            <input type="text" id="ipInput" placeholder="Ej: 192.168.1.1">
+            <button id="analyzeBtn">Analizar</button>
+        </div>
+
+        <div id="result" class="result-card hidden">
+            <div class="result-header">
+                <h2 id="result-ip">192.168.1.1</h2>
+                <span id="result-class" class="tag">Clase C</span>
+                <span id="result-type" class="tag private">Privada</span>
+            </div>
+
+            <div class="result-grid">
+                <div class="result-item">
+                    <span class="label">Dirección de Red:</span>
+                    <span id="network" class="value">192.168.1.0</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Broadcast:</span>
+                    <span id="broadcast" class="value">192.168.1.255</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Máscara:</span>
+                    <span id="mask" class="value">255.255.255.0</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Hosts:</span>
+                    <span id="hosts" class="value">254</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
